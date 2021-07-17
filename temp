@@ -1,0 +1,13 @@
+//mongodb+srv://anmol:<password>@cluster0.ilmt8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://anmol:<password>@cluster0.ilmt8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+//ph34PCWFyQoCm1cB
+//anmol

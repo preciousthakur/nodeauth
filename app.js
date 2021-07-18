@@ -33,7 +33,7 @@ app.post('/register', jsonParser, function (req, res) {
 
     data.save().then((result) => {
         jwt.sign({ result }, jwtKey, { expiresIn: '300s' }, (err, token) => {
-            res.status(201).json({ token })
+            res.status(201).json({"User Registered Successfully"})
         })
         // res.ststus(201).json(result)
     })
